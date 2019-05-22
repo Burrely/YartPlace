@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<main>
+
+    <div class="container-fluid">
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-7">
+
+                <h2>Become artsy!</h2>
+
+                <div class="secondary-panel col-md-12">
+                    <p>
+                        Welcome to YartPlace, your place for art!<br />
+                        Whether you want to make art, or commission art, this is the place for it!
+                    </p>
+                    <p>
+                        We have created this platform the create a fair environment for artists and commissioners.
+                        Our goal is to make sure that commissioners get what they want, and to make sure that artists don't get extorted.
+                    </p>
+
+                    <a href="@Url.Action("Login", "Account")" class="btn btn-primary col-md-12">Log in!</a>
+
+                </div>
+
+                <div id="LoginOutput" class="secondary-panel col-md-12">
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</main>

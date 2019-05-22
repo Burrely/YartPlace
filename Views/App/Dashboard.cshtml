@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "Dashboard";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<main>
+
+    <div class="container-fluid">
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-7">
+
+                <h2>Your dashboard</h2>
+
+                <div class="primary-panel col-md-12">
+                    <script>
+                        var profileData = JSON.parse(localStorage.loggedInProfile);
+                        var profilePrint = {
+                            image: "<img src='" + profileData.profileImageUrl + "'/>",
+                            fullName: "<p>Naam: <span class='text-muted'>" + profileData.firstName + " " + profileData.lastName + "</span></p>",
+                            emailAddress: "<p>Email Address: <span class='text-muted'>" + profileData.emailAddress + "</span></p>"
+                        };
+                        document.write(profilePrint.image + profilePrint.emailAddress + profilePrint.fullName);
+                    </script>
+
+                    <button class="btn btn-danger" onclick="signOut">Log out</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</main>
